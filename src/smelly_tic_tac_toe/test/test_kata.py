@@ -4,7 +4,7 @@ from smelly_tic_tac_toe.kata import Game
 
 
 class TestGame:
-    def __init__(self):
+    def setup_method(self):
         self.game = Game()
 
     def test_not_allow_player_o_to_play_first(self):
