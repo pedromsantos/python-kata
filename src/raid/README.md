@@ -22,16 +22,16 @@ In the following example, we will see one application of the seam model to some 
 
 _Example:_
 
-```csharp
+```python
 
-public class Game
-{
-  public void Play()
-  {
-    var diceResult = new Random().Next(1, 6);
-    ...
-  }
-}
+class Game:
+    def play(self):
+        dice_result = self.roll()
+        # ... other game logic ...
+
+    def roll(self):
+        import random
+        return random.randint(1, 6)
 
 ```
 
@@ -40,63 +40,41 @@ In this case, the Game class is coupled with the random number generator library
 **Step 1:** Add a protected virtual method to the Game class to encapsulate the behavior that has the Coupling issue.
 Use a protected method to avoid extending the public interface of the Game class.
 
-```csharp
+```python
 
-public class Game
-{
-  public void Play()
-  {
-    var diceResult = roll();
-    ...
-  }
+class Game:
+    def play(self):
+        dice_result = self.roll()
+        # ... other game logic ...
 
-  protected virtual int Roll()
-  {
-    return new Random().Next(1, 6);
-  }
-}
-
+    def roll(self):
+        import random
+        return random.randint(1, 6)
 ```
 
 **Step 2:** In your _test code_, inherit from the Game class and change the behavior of the protected virtual method `Roll` to something you have control over.
 
-```csharp
+```python
 
-public class TestableGame : Game
-{
-  private int roll;
+class TestableGame(Game):
+    def __init__(self, desired_roll):
+        self.roll = desired_roll
 
-  public TestableGame(int desiredRoll)
-  {
-    roll = desiredRoll;
-  }
-
-  protected override int Roll()
-  {
-    return roll;
-  }
-}
-
+    def roll(self):
+        return self.roll
 ```
 
 **Step 3:** Write a test using the TestableGame class.
 
-```csharp
+```python
 
-[TestFixture]
-public class GameShould
-{
-  [Test]
-  public void Do_Something_When_A_Six_Is_Rolled()
-  {
-    var game = new TestableGame(6);
+class GameShould:
+    def test_do_something_when_a_six_is_rolled(self):
+        game = TestableGame(6)
 
-    game.Play();
+        game.play()
 
-    //ASSERT
-  }
-}
-
+        #ASSERT
 ```
 
 This technique can also work when a class calls static methods. The main advantage of this technique is that it can be performed by the IDE using automated refactoring only. That reduces the manual changes to production code and the risk of introducing bugs.
