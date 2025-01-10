@@ -34,7 +34,7 @@ jobs:
           path: .venv
           key: pydeps-${{ hashFiles('**/poetry.lock') }}
       - name: recreate lock file
-        run: poetry lock --no-update
+        run: poetry lock
       - name: Install dependencies using poetry
         run: poetry install --no-interaction --no-root
         if: steps.cache-deps.outputs.cache-hit != 'true'
