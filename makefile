@@ -11,6 +11,10 @@ test:  # Make test the default task
 	$(MAKE) stack
 	$(MAKE) tic
 	$(MAKE) yahtzee
+	$(MAKE) tennis
+	$(MAKE) gilded_rose
+	$(MAKE) raid
+	$(MAKE) smelly
 
 fizz:
 	pytest src/fizz_buzz/tests
@@ -35,3 +39,15 @@ tic:
 
 yahtzee:
 	pytest src/yahtzee/tests
+
+tennis:
+	pytest src/tennis/tests
+
+gilded_rose:
+	pytest src/gilded_rose/tests
+
+raid:
+	pytest src/raid/tests
+
+smelly:
+	pytest src/smelly_tic_tac_toe/tests
