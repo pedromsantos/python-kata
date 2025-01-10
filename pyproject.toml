@@ -6,7 +6,7 @@ authors = [
     { name = "Pedro M Santos", email = "pedromsantos@users.noreply.github.com" },
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "coverage==7.6.10",
     "pytest==8.3.4",
