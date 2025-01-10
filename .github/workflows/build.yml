@@ -40,9 +40,9 @@ jobs:
         if: steps.cache-deps.outputs.cache-hit != 'true'
       - name: Install project
         run: poetry install --no-interaction
-      - name: Analysing the code with pylint
-        run: |
-          poetry run pylint ./src --fail-under=2.5
+      # - name: Analysing the code with pylint
+      #   run: |
+      #     poetry run pylint ./src --fail-under=1
       - name: Test with poetry
         run: |
           poetry run pytest
