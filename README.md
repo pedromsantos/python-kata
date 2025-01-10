@@ -73,7 +73,7 @@ You can also run tests for individual katas using the following commands:
 - **Gilded Rose**:
 
   ```bash
-  make gilded_rose
+  make gilded
   ```
 
 - **Raid**:
@@ -86,6 +86,36 @@ You can also run tests for individual katas using the following commands:
 
   ```bash
   make smelly
+  ```
+
+- **Character Copier**:
+
+  ```bash
+  make copier
+  ```
+
+- **ESA Mars Rover**:
+
+  ```bash
+  make esa
+  ```
+
+- **Social Network**:
+
+  ```bash
+  make social
+  ```
+
+- **London Tic Tac Toe**:
+
+  ```bash
+  make london
+  ```
+
+- **Raid**:
+
+  ```bash
+  make raid
   ```
 
 Make sure you have `pytest` installed to run the tests successfully.

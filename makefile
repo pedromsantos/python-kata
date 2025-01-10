@@ -12,9 +12,12 @@ test:  # Make test the default task
 	$(MAKE) tic
 	$(MAKE) yahtzee
 	$(MAKE) tennis
-	$(MAKE) gilded_rose
+	$(MAKE) gilded
 	$(MAKE) raid
 	$(MAKE) smelly
+	$(MAKE) copier
+	$(MAKE) esa
+	$(MAKE) london
 
 fizz:
 	pytest src/fizz_buzz/tests
@@ -43,7 +46,7 @@ yahtzee:
 tennis:
 	pytest src/tennis/tests
 
-gilded_rose:
+gilded:
 	pytest src/gilded_rose/tests
 
 raid:
@@ -51,3 +54,15 @@ raid:
 
 smelly:
 	pytest src/smelly_tic_tac_toe/tests
+
+copier:
+	pytest src/character_copier/tests
+
+esa:
+	pytest src/ESA_mars_rover/tests
+
+social:
+	pytest src/social_network/tests
+
+london:
+	pytest src/london_tic_tac_toe/tests
