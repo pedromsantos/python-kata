@@ -1,0 +1,24 @@
+[project]
+name = "python-kata"
+version = "0.0.1"
+description = "A collection of coding katas from [Agile Technical Practices Distilled](https://leanpub.com/agiletechnicalpracticesdistilled)"
+authors = [
+    { name = "Pedro M Santos", email = "pedromsantos@users.noreply.github.com" },
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "coverage==7.6.10",
+    "pytest==8.3.4",
+    "pytest-cov==6.0.0",
+    "pytest-watch==4.2.0",
+    "approvaltests==14.3.0",
+    "pytest-approvaltests==0.2.4",
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

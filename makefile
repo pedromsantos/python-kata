@@ -20,49 +20,49 @@ test:  # Make test the default task
 	$(MAKE) london
 
 fizz:
-	pytest src/fizz_buzz/tests
+	pytest src/fizz_buzz/test
 
 fib:
-	pytest src/fibonacci/tests
+	pytest src/fibonacci/test
 
 leap:
-	pytest src/leap_year/tests
+	pytest src/leap_year/test
 
 prime:
-	pytest src/prime_factors/tests
+	pytest src/prime_factors/test
 
 roman:
-	pytest src/roman_numerals/tests
+	pytest src/roman_numerals/test
 
 stack:
-	pytest src/stack_kata/tests
+	pytest src/stack_kata/test
 
 tic:
-	pytest src/tic_tac_toe/tests
+	pytest src/tic_tac_toe/test
 
 yahtzee:
-	pytest src/yahtzee/tests
+	pytest src/yahtzee/test
 
 tennis:
-	pytest src/tennis/tests
+	pytest src/tennis/test
 
 gilded:
-	pytest src/gilded_rose/tests
+	pytest src/gilded_rose/test
 
 raid:
-	pytest src/raid/tests
+	pytest src/raid/test
 
 smelly:
-	pytest src/smelly_tic_tac_toe/tests
+	pytest src/smelly_tic_tac_toe/test
 
 copier:
-	pytest src/character_copier/tests
+	pytest src/character_copier/test
 
 esa:
-	pytest src/ESA_mars_rover/tests
+	pytest src/ESA_mars_rover/test
 
 social:
-	pytest src/social_network/tests
+	pytest src/social_network/test
 
 london:
-	pytest src/london_tic_tac_toe/tests
+	pytest src/london_tic_tac_toe/test
