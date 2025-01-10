@@ -1,5 +1,3 @@
-namespace RaidKata;
-
 class RaidService:
     def get_raids_by_guild_member(self, other):
         player = GuildDao.find_active_player()

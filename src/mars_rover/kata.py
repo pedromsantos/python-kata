@@ -1,3 +1,3 @@
 class Rover:
-    def execute(self, input: str) -> str:
-        return input
+    def execute(self, command: str) -> str:
+        return command

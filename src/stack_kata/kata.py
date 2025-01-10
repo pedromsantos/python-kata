@@ -1,1 +1,1 @@
-stack = 0;
+stack = 0

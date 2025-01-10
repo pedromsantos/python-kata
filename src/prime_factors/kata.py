@@ -1,1 +1,1 @@
-primeFactors = 1;
+primeFactors = 1

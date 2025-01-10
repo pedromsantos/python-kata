@@ -1,1 +1,1 @@
-yahtzee = 0;
+yahtzee = 0

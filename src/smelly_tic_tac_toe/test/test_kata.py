@@ -2,8 +2,9 @@ import pytest
 
 from smelly_tic_tac_toe.kata import Game
 
+
 class TestGame:
-    def setup_method(self):
+    def __init__(self):
         self.game = Game()
 
     def test_not_allow_player_o_to_play_first(self):

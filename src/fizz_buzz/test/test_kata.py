@@ -1,4 +1,3 @@
-import pytest
 from fizz_buzz.kata import fizzBuzz
 
 def test_fizz_buzz():

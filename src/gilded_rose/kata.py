@@ -1,6 +1,6 @@
-# -*- coding: utf-8 -*-
+# pylint: skip-file
 
-class GildedRose(object):
+class GildedRose:
 
     def __init__(self, items):
         self.items = items

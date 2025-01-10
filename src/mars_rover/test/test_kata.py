@@ -1,4 +1,3 @@
-import pytest
 from mars_rover.kata import Rover
 
 def test_turn_360_degrees_clockwise():
