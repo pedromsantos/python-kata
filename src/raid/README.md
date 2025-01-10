@@ -40,10 +40,10 @@ In this case, the Game class is coupled with the random number generator library
 
 class Game:
     def play(self):
-        dice_result = self.roll()
+        dice_result = self._roll()
         # ... other game logic ...
 
-    def roll(self):
+    def _roll(self):
         import random
         return random.randint(1, 6)
 ```
@@ -54,9 +54,9 @@ class Game:
 
 class TestableGame(Game):
     def __init__(self, desired_roll):
-        self.roll = desired_roll
+        self._roll = desired_roll
 
-    def roll(self):
+    def _roll(self):
         return self.roll
 ```
 
