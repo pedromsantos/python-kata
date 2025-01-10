@@ -26,19 +26,15 @@ _Example:_
 
 class Game:
     def play(self):
-        dice_result = self.roll()
-        # ... other game logic ...
-
-    def roll(self):
         import random
-        return random.randint(1, 6)
+        dice_result = random.randint(1, 6)
+        # ... other game logic ...
 
 ```
 
 In this case, the Game class is coupled with the random number generator library. We need to control the dice rolling to test the Game class.
 
-**Step 1:** Add a protected virtual method to the Game class to encapsulate the behavior that has the Coupling issue.
-Use a protected method to avoid extending the public interface of the Game class.
+**Step 1:** Add a method to the Game class to encapsulate the behavior that has the Coupling issue.
 
 ```python
 
@@ -52,7 +48,7 @@ class Game:
         return random.randint(1, 6)
 ```
 
-**Step 2:** In your _test code_, inherit from the Game class and change the behavior of the protected virtual method `Roll` to something you have control over.
+**Step 2:** In your _test code_, inherit from the Game class and change the behavior of the method `Roll` to something you have control over.
 
 ```python
 
