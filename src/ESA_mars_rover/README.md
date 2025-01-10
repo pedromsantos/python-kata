@@ -85,15 +85,17 @@ LMLMLMLMM
 
 ## Technical Interface
 
-```typescript
-interface Rover {
-  execute(): void;
-}
+```python
+class Rover:
+    def execute(self) -> None:
+        pass  # Implementation goes here
 
-interface Radio {
-  send(message: string): void;
-  receive(): string;
-}
+class Radio:
+    def send(self, message: str) -> None:
+        pass  # Implementation goes here
+
+    def receive(self) -> str:
+        pass  # Implementation goes here
 ```
 
 > Note: Radio implementation is handled by a separate team.

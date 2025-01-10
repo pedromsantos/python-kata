@@ -6,8 +6,8 @@ Write a function that returns the Fibonacci number at a given position.
 
 ### Function Signature
 
-```typescript
-function fibonacci(position: number): number;
+```python
+def fibonacci(position: int) -> int:
 ```
 
 ### Sequence Definition

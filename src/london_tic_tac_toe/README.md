@@ -13,4 +13,4 @@
 
 In this version of TicTacToe nothing is returned but a call to an Output is made to print the game events.
 
-Use the type definitions in `kata.ts` to get started.
+Use the type definitions in `kata.py` to get started.

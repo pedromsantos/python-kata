@@ -86,9 +86,9 @@ Output:
 2. Start with the provided acceptance tests
 3. Basic implementation example:
 
-```typescript
-const rover = new Rover();
-const finalPosition = rover.execute('5 5\n1 2 N\nLMLMLMLMM');
+```python
+rover = Rover()
+final_position = rover.execute('5 5\n1 2 N\nLMLMLMLMM')
 ```
 
 ### Refactoring Phase
