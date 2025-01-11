@@ -5,7 +5,7 @@
 The game of yahtzee is a simple dice game.
 
 Each round, each player rolls five six sided dice.
-The player may choose to reroll some or all of the dice up to three times (including the original roll).
+The player may choose to re-roll some or all of the dice up to three times (including the original roll).
 
 The player then places the roll at a category, such as ones, twos, sixes, pair, two pairs etc.
 If the roll is compatible with the score, the player gets a score for this roll according to the rules.

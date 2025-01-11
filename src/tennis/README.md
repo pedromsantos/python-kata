@@ -77,7 +77,7 @@ All files                 |   86.28 |    67.74 |   96.61 |   86.03 |
    - Extracting constants from magic numbers and strings
    - Extracting complex conditional expressions
 4. Tackle scattering by
-   - Refinining the scope for variables
+   - Refining the scope for variables
    - Ensuring variables are declared close to where they are used
    - Grouping public methods at the top of the class to show first what matters the most
 

@@ -85,7 +85,7 @@ Take as much time as you need; there is no deadline.
 ## Unit vs Integration vs Acceptance vs E2E Testing
 
 |                       | **Unit**                    | **Integration aka contract**                            | **Acceptance aka system**                           | **E2e aka functional**                                      |
-| --------------------- | --------------------------- | ------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------- |
+|-----------------------|-----------------------------|---------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------|
 | **Boundary**          | Class, Aggregate            | Class - External dependency                             | Application code (mock/stub) external dependencies  | Application and network dependencies services and databases |
 | **Size**              | Tiny                        | Tiny to Small                                           | Small to Medium                                     | Large                                                       |
 | **Environment**       | Development                 | Integration test env                                    | Developement/QA                                     | Prod like                                                   |

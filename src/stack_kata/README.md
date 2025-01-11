@@ -11,7 +11,7 @@ Implement a Stack class with the following public methods:
 ## Test Cases
 
 | Input (push) | Expected Output (pop) |
-| ------------ | --------------------- |
+|--------------|-----------------------|
 | Empty Stack  | throws Exception      |
 | push(1)      | 1                     |
 | push(2)      | 2                     |

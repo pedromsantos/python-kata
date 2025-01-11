@@ -38,8 +38,8 @@ test_cases = [
     (14, 16, "Win for player2", "player1", "player2"),
 ]
 
-def play_game(TennisGame, p1_points, p2_points, p1_name, p2_name):
-    game = TennisGame(p1_name, p2_name)
+def play_game(tennisGame, p1_points, p2_points, p1_name, p2_name):
+    game = tennisGame(p1_name, p2_name)
     for i in range(max(p1_points, p2_points)):
         if i < p1_points:
             game.won_point(p1_name)

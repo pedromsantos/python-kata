@@ -15,7 +15,7 @@ Write a function that returns true or false depending on whether its input integ
   - 2000 is an atypical leap year
 
 | **Input** | **Output** |
-| --------- | ---------- |
+|-----------|------------|
 | **1**     | false      |
 | **2**     | false      |
 | **3**     | false      |

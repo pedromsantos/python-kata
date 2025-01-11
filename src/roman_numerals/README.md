@@ -6,7 +6,7 @@
 - The code must be able to take numbers up to 3999 and convert to their Roman equivalent.
 
 | **Arabic number** | **Roman numeral** |
-| ----------------- | ----------------- |
+|-------------------|-------------------|
 | **1**             | I                 |
 | **2**             | II                |
 | **3**             | III               |
@@ -50,21 +50,21 @@ Use the Transformation Priority Premise (TPP) to evolve your code.
 
 ### TPP table
 
-| #   | Transformation              | Start code         | End code                                 |
-| --- | --------------------------- | ------------------ | ---------------------------------------- |
-| 1   | {} → nil                    | {}                 | [return] nil                             |
-| 2   | nil → constant              | [return] nil       | [return] "1"                             |
-| 3   | constant → constant+        | [return] "1"       | [return] "1" + "2"                       |
-| 4   | constant → scalar           | [return] "1" + "2" | [return] argument                        |
-| 5   | statement → statements      | [return] argument  | [return] min(max(0, argument), 10)       |
-| 6   | unconditional → conditional | [return] argument  | if(condition) [return] 1 else [return] 0 |
-| 7   | scalar → array              | dog                | [dog, cat]                               |
-| 8   | array → container           | [dog, cat]         | {dog="DOG", cat="CAT"}                   |
-| 9   | statement → tail recursion  | a + b              | a + recursion                            |
-| 10  | if → loop                   | if(condition)      | loop(condition)                          |
-| 11  | statement → recursion       | a + recursion      | recursion                                |
-| 12  | expression → function       | today – birth      | calculateBirthDate()                     |
-| 13  | variable → mutation         | day                | var day = 10; day = 11;                  |
+| #  | Transformation              | Start code         | End code                                 |
+|----|-----------------------------|--------------------|------------------------------------------|
+| 1  | {} → nil                    | {}                 | [return] nil                             |
+| 2  | nil → constant              | [return] nil       | [return] "1"                             |
+| 3  | constant → constant+        | [return] "1"       | [return] "1" + "2"                       |
+| 4  | constant → scalar           | [return] "1" + "2" | [return] argument                        |
+| 5  | statement → statements      | [return] argument  | [return] min(max(0, argument), 10)       |
+| 6  | unconditional → conditional | [return] argument  | if(condition) [return] 1 else [return] 0 |
+| 7  | scalar → array              | dog                | [dog, cat]                               |
+| 8  | array → container           | [dog, cat]         | {dog="DOG", cat="CAT"}                   |
+| 9  | statement → tail recursion  | a + b              | a + recursion                            |
+| 10 | if → loop                   | if(condition)      | loop(condition)                          |
+| 11 | statement → recursion       | a + recursion      | recursion                                |
+| 12 | expression → function       | today – birth      | calculateBirthDate()                     |
+| 13 | variable → mutation         | day                | var day = 10; day = 11;                  |
 
 Transformations at the top of the list have priority over those at the bottom. It is better (or simpler) to change a constant into a variable than it is to add an `if` statement. So when making a test pass, favor simpler transformations (top of the list) over those more complicated (bottom of the list).
 
@@ -73,7 +73,7 @@ Another way to use the Transformation Priority Premise is to keep writing new co
 ### Example using Transformation Priority Premise on Fibonacci sequence
 
 | Input | Expected output | Transformation              | Implementation                                                          |
-| ----- | --------------- | --------------------------- | ----------------------------------------------------------------------- |
+|-------|-----------------|-----------------------------|-------------------------------------------------------------------------|
 | 0     | 0               | {} → nil                    | :warning: Does not work                                                 |
 | 0     | 0               | nil → constant              | `return 0`                                                              |
 | 1     | 1               | constant → scalar           | `return index`                                                          |

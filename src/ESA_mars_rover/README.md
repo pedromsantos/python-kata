@@ -66,7 +66,7 @@ Example:
 ### Command Translations
 
 | Language   | Left | Right | Move |
-| ---------- | ---- | ----- | ---- |
+|------------|------|-------|------|
 | English    | L    | R     | M    |
 | Spanish    | I    | D     | A    |
 | French     | G    | D     | A    |

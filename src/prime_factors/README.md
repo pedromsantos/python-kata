@@ -9,7 +9,7 @@ Given a positive integer, return an array of its prime factors in ascending orde
 ## Examples
 
 | **Input** | **Output** | **Explanation** |
-| --------- | ---------- | --------------- |
+|-----------|------------|-----------------|
 | 2         | `[2]`      | 2 is prime      |
 | 3         | `[3]`      | 3 is prime      |
 | 4         | `[2,2]`    | 4 = 2 × 2       |

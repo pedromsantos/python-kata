@@ -8,6 +8,7 @@ Write a function that returns the Fibonacci number at a given position.
 
 ```python
 def fibonacci(position: int) -> int:
+    ...
 ```
 
 ### Sequence Definition
@@ -19,7 +20,7 @@ The Fibonacci sequence is defined where each number is the sum of the two preced
 The first 10 Fibonacci numbers are:
 
 | Position | Value |
-| -------- | ----- |
+|----------|-------|
 | 0        | 0     |
 | 1        | 1     |
 | 2        | 1     |
