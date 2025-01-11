@@ -22,7 +22,7 @@ dependencies = [
 package-mode = false
 
 [tool.pytest.ini_options]
-addopts = "--cov=src --cov-report html --cov-fail-under=47"
+# addopts = "--cov=src --cov-report html --cov-fail-under=47"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

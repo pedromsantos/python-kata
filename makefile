@@ -59,7 +59,7 @@ copier:
 	pytest src/character_copier/test
 
 esa:
-	pytest src/ESA_mars_rover/test
+	pytest src/esa_mars_rover/test
 
 social:
 	pytest src/social_network/test
