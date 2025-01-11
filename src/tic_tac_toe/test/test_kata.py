@@ -1,4 +1,5 @@
-from tic_tac_toe.kata import winner
+from tic_tac_toe.kata import WINNER
+
 
 def test_tic_tac_toe_should_have_a_winner():
-    assert winner == 'a player'
+    assert WINNER == 'a player'

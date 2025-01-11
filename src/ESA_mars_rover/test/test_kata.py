@@ -1,4 +1,5 @@
-from ESA_mars_rover.kata import rover
+from ESA_mars_rover.kata import MARS_ROVER
+
 
 def test_rover_position():
-    assert rover == 'Mars plateau'
+    assert MARS_ROVER == 'Mars plateau'

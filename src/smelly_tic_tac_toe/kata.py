@@ -4,6 +4,7 @@ class Tile:
         self.y = y
         self.symbol = ' '
 
+
 class Board:
     def __init__(self):
         self.plays = []
@@ -18,6 +19,7 @@ class Board:
         tile = self.tile_at(x, y)
         tile.symbol = symbol
 
+
 class Game:
     def __init__(self):
         self.last_symbol = ' '
@@ -29,13 +31,13 @@ class Game:
         if self.last_symbol == ' ':
             # if player is O
             if symbol == 'O':
-                raise Exception("Invalid first player")
+                raise Exception('Invalid first player')
         # if not first move but player repeated
         elif symbol == self.last_symbol:
-            raise Exception("Invalid next player")
+            raise Exception('Invalid next player')
         # if not first move but play on an already played tile
         elif self.board.tile_at(x, y).symbol != ' ':
-            raise Exception("Invalid position")
+            raise Exception('Invalid position')
 
         # update game state
         self.last_symbol = symbol
@@ -51,7 +53,8 @@ class Game:
             # if first row is full with same symbol
             if (
                 self.board.tile_at(0, 0).symbol == self.board.tile_at(0, 1).symbol and
-                self.board.tile_at(0, 2).symbol == self.board.tile_at(0, 1).symbol
+                self.board.tile_at(
+                    0, 2).symbol == self.board.tile_at(0, 1).symbol
             ):
                 return self.board.tile_at(0, 0).symbol
 
@@ -64,7 +67,8 @@ class Game:
             # if middle row is full with same symbol
             if (
                 self.board.tile_at(1, 0).symbol == self.board.tile_at(1, 1).symbol and
-                self.board.tile_at(1, 2).symbol == self.board.tile_at(1, 1).symbol
+                self.board.tile_at(
+                    1, 2).symbol == self.board.tile_at(1, 1).symbol
             ):
                 return self.board.tile_at(1, 0).symbol
 
@@ -77,7 +81,8 @@ class Game:
             # if last row is full with same symbol
             if (
                 self.board.tile_at(2, 0).symbol == self.board.tile_at(2, 1).symbol and
-                self.board.tile_at(2, 2).symbol == self.board.tile_at(2, 1).symbol
+                self.board.tile_at(
+                    2, 2).symbol == self.board.tile_at(2, 1).symbol
             ):
                 return self.board.tile_at(2, 0).symbol
 

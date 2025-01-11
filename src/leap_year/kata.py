@@ -1,1 +1,1 @@
-leapYear = True
+LEAP_YEAR = True

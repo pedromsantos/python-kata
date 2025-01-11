@@ -1,4 +1,5 @@
-from stack_kata.kata import stack
+from stack_kata.kata import STACK
+
 
 def test_stack_should_be_zero():
-    assert stack == 0
+    assert STACK == 0

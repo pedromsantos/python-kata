@@ -1,1 +1,1 @@
-fibonacci = 0
+FIBONACCI = 0

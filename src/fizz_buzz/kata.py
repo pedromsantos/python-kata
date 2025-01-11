@@ -1,1 +1,1 @@
-fizzBuzz = ""
+FIZZ_BUZZ = ''

@@ -1,4 +1,5 @@
-from fibonacci.kata import fibonacci
+from fibonacci.kata import FIBONACCI
+
 
 def test_fibonacci_starts_at_zero():
-    assert fibonacci == 0
+    assert FIBONACCI == 0

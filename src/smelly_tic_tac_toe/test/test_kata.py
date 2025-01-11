@@ -10,26 +10,26 @@ class TestGame:
     def test_not_allow_player_o_to_play_first(self):
         with pytest.raises(Exception) as excinfo:
             self.game.play('O', 0, 0)
-        assert str(excinfo.value) == "Invalid first player"
+        assert str(excinfo.value) == 'Invalid first player'
 
     def test_not_allow_player_x_to_play_twice_in_a_row(self):
         self.game.play('X', 0, 0)
         with pytest.raises(Exception) as excinfo:
             self.game.play('X', 1, 0)
-        assert str(excinfo.value) == "Invalid next player"
+        assert str(excinfo.value) == 'Invalid next player'
 
     def test_not_allow_player_to_play_in_last_played_position(self):
         self.game.play('X', 0, 0)
         with pytest.raises(Exception) as excinfo:
             self.game.play('O', 0, 0)
-        assert str(excinfo.value) == "Invalid position"
+        assert str(excinfo.value) == 'Invalid position'
 
     def test_not_allow_player_to_play_in_any_played_position(self):
         self.game.play('X', 0, 0)
         self.game.play('O', 1, 0)
         with pytest.raises(Exception) as excinfo:
             self.game.play('X', 0, 0)
-        assert str(excinfo.value) == "Invalid position"
+        assert str(excinfo.value) == 'Invalid position'
 
     def test_declare_player_x_as_a_winner_if_three_in_top_row(self):
         self.game.play('X', 0, 0)

@@ -1,4 +1,5 @@
-from fizz_buzz.kata import fizzBuzz
+from fizz_buzz.kata import FIZZ_BUZZ
+
 
 def test_fizz_buzz():
-    assert fizzBuzz == ""
+    assert FIZZ_BUZZ == ''

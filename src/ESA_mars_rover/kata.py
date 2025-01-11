@@ -1,8 +1,10 @@
-rover = 'Mars plateau'
+MARS_ROVER = 'Mars plateau'
+
 
 class Rover:
     def execute(self):
         pass  # Implementation goes here
+
 
 class Radio:
     def send(self, message: str):

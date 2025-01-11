@@ -1,4 +1,5 @@
-from yahtzee.kata import yahtzee
+from yahtzee.kata import YAHTZEE
+
 
 def test_yahtzee_initial_score():
-    assert yahtzee == 0
+    assert YAHTZEE == 0

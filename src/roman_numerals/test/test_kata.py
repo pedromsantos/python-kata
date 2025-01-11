@@ -1,4 +1,5 @@
-from roman_numerals.kata import romanNumeral
+from roman_numerals.kata import ROMAN_NUMERAL
+
 
 def test_roman_numeral_should():
-    assert romanNumeral == 'roman numeral'
+    assert ROMAN_NUMERAL == 'roman numeral'

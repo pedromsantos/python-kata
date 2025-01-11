@@ -1,1 +1,1 @@
-primeFactors = 1
+PRIME_FACTORS = 1
