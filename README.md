@@ -4,7 +4,7 @@ A collection of coding katas following the learning path from [Agile Technical P
 
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![image](https://img.shields.io/pypi/l/ruff.svg)](https://github.com/pedromsantos/python-kata/blob/main/LICENSE)
-[![Actions status](https://github.com/pedromsantos/python-kata/workflows/CI/badge.svg)](https://github.com/pedromsantos/python-kata/actions)
+[![Actions status](https://github.com/pedromsantos/python/actions/workflows/build.yml/badge.svg)](https://github.com/pedromsantos/python/actions/workflows/build.yml/badge.svg)
 
 ## Running Tests
 
