@@ -2,6 +2,8 @@
 
 A collection of coding katas following the learning path from [Agile Technical Practices Distilled](https://leanpub.com/agiletechnicalpracticesdistilled).
 
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
 ## Running Tests
 
 To run the tests for the various katas, you can use the following commands:
