@@ -1,4 +1,4 @@
-MARS_ROVER = 'Mars plateau'
+MARS_ROVER = "Mars plateau"
 
 
 class Rover:

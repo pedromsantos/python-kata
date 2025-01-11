@@ -2,7 +2,7 @@ class Tile:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.symbol = ' '
+        self.symbol = " "
 
 
 class Board:
@@ -22,22 +22,22 @@ class Board:
 
 class Game:
     def __init__(self):
-        self.last_symbol = ' '
+        self.last_symbol = " "
         self.board = Board()
-        self.winner = ' '
+        self.winner = " "
 
     def play(self, symbol, x, y):
         # if first move
-        if self.last_symbol == ' ':
+        if self.last_symbol == " ":
             # if player is O
-            if symbol == 'O':
-                raise Exception('Invalid first player')
+            if symbol == "O":
+                raise Exception("Invalid first player")
         # if not first move but player repeated
         elif symbol == self.last_symbol:
-            raise Exception('Invalid next player')
+            raise Exception("Invalid next player")
         # if not first move but play on an already played tile
-        elif self.board.tile_at(x, y).symbol != ' ':
-            raise Exception('Invalid position')
+        elif self.board.tile_at(x, y).symbol != " ":
+            raise Exception("Invalid position")
 
         # update game state
         self.last_symbol = symbol
@@ -46,44 +46,41 @@ class Game:
     def determine_winner(self):
         # if the positions in first row are taken
         if (
-            self.board.tile_at(0, 0).symbol != ' ' and
-            self.board.tile_at(0, 1).symbol != ' ' and
-            self.board.tile_at(0, 2).symbol != ' '
+            self.board.tile_at(0, 0).symbol != " "
+            and self.board.tile_at(0, 1).symbol != " "
+            and self.board.tile_at(0, 2).symbol != " "
         ):
             # if first row is full with same symbol
             if (
-                self.board.tile_at(0, 0).symbol == self.board.tile_at(0, 1).symbol and
-                self.board.tile_at(
-                    0, 2).symbol == self.board.tile_at(0, 1).symbol
+                self.board.tile_at(0, 0).symbol == self.board.tile_at(0, 1).symbol
+                and self.board.tile_at(0, 2).symbol == self.board.tile_at(0, 1).symbol
             ):
                 return self.board.tile_at(0, 0).symbol
 
         # if the positions in middle row are taken
         if (
-            self.board.tile_at(1, 0).symbol != ' ' and
-            self.board.tile_at(1, 1).symbol != ' ' and
-            self.board.tile_at(1, 2).symbol != ' '
+            self.board.tile_at(1, 0).symbol != " "
+            and self.board.tile_at(1, 1).symbol != " "
+            and self.board.tile_at(1, 2).symbol != " "
         ):
             # if middle row is full with same symbol
             if (
-                self.board.tile_at(1, 0).symbol == self.board.tile_at(1, 1).symbol and
-                self.board.tile_at(
-                    1, 2).symbol == self.board.tile_at(1, 1).symbol
+                self.board.tile_at(1, 0).symbol == self.board.tile_at(1, 1).symbol
+                and self.board.tile_at(1, 2).symbol == self.board.tile_at(1, 1).symbol
             ):
                 return self.board.tile_at(1, 0).symbol
 
         # if the positions in last row are taken
         if (
-            self.board.tile_at(2, 0).symbol != ' ' and
-            self.board.tile_at(2, 1).symbol != ' ' and
-            self.board.tile_at(2, 2).symbol != ' '
+            self.board.tile_at(2, 0).symbol != " "
+            and self.board.tile_at(2, 1).symbol != " "
+            and self.board.tile_at(2, 2).symbol != " "
         ):
             # if last row is full with same symbol
             if (
-                self.board.tile_at(2, 0).symbol == self.board.tile_at(2, 1).symbol and
-                self.board.tile_at(
-                    2, 2).symbol == self.board.tile_at(2, 1).symbol
+                self.board.tile_at(2, 0).symbol == self.board.tile_at(2, 1).symbol
+                and self.board.tile_at(2, 2).symbol == self.board.tile_at(2, 1).symbol
             ):
                 return self.board.tile_at(2, 0).symbol
 
-        return ' '
+        return " "

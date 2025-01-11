@@ -1,1 +1,1 @@
-WINNER = 'a player'
+WINNER = "a player"

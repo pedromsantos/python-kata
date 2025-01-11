@@ -3,7 +3,7 @@ class RaidService:
         player = GuildDao.find_active_player()
 
         if player is None:
-            raise ValueError('Player not found')
+            raise ValueError("Player not found")
 
         if player in other.get_friends():
             return RaidDao.find_raids_by(other)
@@ -32,13 +32,13 @@ class GuildMember:
 class GuildDao:
     @staticmethod
     def find_active_player():
-        raise NotImplementedError('Method not implemented')
+        raise NotImplementedError("Method not implemented")
 
 
 class RaidDao:
     @staticmethod
     def find_raids_by(guild_member):
-        raise NotImplementedError('Method not implemented')
+        raise NotImplementedError("Method not implemented")
 
 
 class Raid:

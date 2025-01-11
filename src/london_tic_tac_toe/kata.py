@@ -2,8 +2,8 @@ from enum import Enum
 
 
 class Player(Enum):
-    X = 1
-    O = 2
+    PLAYER_X = 1
+    PLAYER_O = 2
 
 
 class Row(Enum):
@@ -23,7 +23,7 @@ class Cell:
         self.row = row
         self.column = column
 
-    def equals(self, other: 'Cell') -> bool:
+    def equals(self, other: "Cell") -> bool:
         return self.row == other.row and self.column == other.column
 
 
@@ -32,7 +32,7 @@ class Turn:
         self.cell = cell
         self.player = player
 
-    def equals(self, other: 'Turn') -> bool:
+    def equals(self, other: "Turn") -> bool:
         return self.player == other.player and self.cell.equals(other.cell)
 
 
