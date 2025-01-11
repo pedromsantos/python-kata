@@ -14,8 +14,6 @@ dependencies = [
     "pytest-watch==4.2.0",
     "approvaltests==14.3.0",
     "pytest-approvaltests==0.2.4",
-    "pylint>=3.3.3",
-    "black>=24.10.0",
 ]
 
 [tool.poetry]
