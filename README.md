@@ -3,6 +3,7 @@
 A collection of coding katas following the learning path from [Agile Technical Practices Distilled](https://leanpub.com/agiletechnicalpracticesdistilled).
 
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![image](https://img.shields.io/pypi/l/ruff.svg)](https://github.com/pedromsantos/python-kata/blob/main/LICENSE)
 
 ## Running Tests
 
