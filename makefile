@@ -1,6 +1,9 @@
 # Makefile for Python Kata
 
-.PHONY: test
+.PHONY: test fizz fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london deps
+
+deps:
+	poetry install
 
 test:  # Make test the default task
 	$(MAKE) fizz
