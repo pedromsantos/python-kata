@@ -20,6 +20,7 @@ dev = [
     "pytest-approvaltests>=0.2.4,<1.0.0",
     "mutmut>=3.3.1,<4.0.0",
     "pyright>=1.1.403",
+    "coverage"
 ]
 
 [tool.pytest.ini_options]
@@ -41,3 +42,12 @@ convention = "google"
 [tool.pyright]
 include = ["src"]
 exclude = ["**/.venv", "**/__pycache__", "node_modules"]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

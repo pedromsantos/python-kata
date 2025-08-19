@@ -382,6 +382,7 @@ source = { virtual = "." }
 [package.dev-dependencies]
 dev = [
     { name = "approvaltests" },
+    { name = "coverage" },
     { name = "mutmut" },
     { name = "pyright" },
     { name = "pytest" },
@@ -396,6 +397,7 @@ dev = [
 [package.metadata.requires-dev]
 dev = [
     { name = "approvaltests", specifier = ">=15.2.1,<16.0.0" },
+    { name = "coverage" },
     { name = "mutmut", specifier = ">=3.3.1,<4.0.0" },
     { name = "pyright", specifier = ">=1.1.403" },
     { name = "pytest", specifier = ">=8.4.1,<9.0.0" },
