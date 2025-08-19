@@ -38,9 +38,6 @@ ignore = ["COM812", "ISC001", "D100", "D101", "D102", "D103", "D104", "D105", "D
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
-[tool.poetry]
-packages = [{ include = "src" }]
-
 [tool.pyright]
 include = ["src"]
 exclude = ["**/.venv", "**/__pycache__", "node_modules"]
