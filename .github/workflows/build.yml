@@ -22,7 +22,11 @@ jobs:
           python-version: "3.12"
       - name: Install uv
         uses: astral-sh/setup-uv@v6
-      - name: Create uv virtual environment for build
-        run: uv venv
-      - name: Install dependencies using uv
-        run: uv pip install .
+      - name: setup
+        run: make setup
+      - name: lint
+        run: make lint
+      - name: types
+        run: make types
+      - name: test
+        run: make test

@@ -1,9 +1,13 @@
 # Makefile for Python Kata
 
-.PHONY: test fizz fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london deps format lint lint-fix types
+.PHONY: test tests fizz fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london deps format lint lint-fix types
 
 deps:
 	uv sync
+
+setup:
+	uv venv
+	uv pip install .
 
 format:
 	uv run ruff format
@@ -17,7 +21,10 @@ lint-fix:
 types:
 	uv run pyright
 
-test:  # Make test the default task
+test:
+	uv run pytest --cov=src
+
+tests:  # Make test the default task
 	$(MAKE) fizz
 	$(MAKE) fib
 	$(MAKE) leap
