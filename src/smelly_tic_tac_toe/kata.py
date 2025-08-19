@@ -1,12 +1,14 @@
+# pylint: skip-file
+# ruff: noqa: TRY002, SIM102
 class Tile:
-    def __init__(self, x, y):
+    def __init__(self, x, y) -> None:
         self.x = x
         self.y = y
         self.symbol = " "
 
 
 class Board:
-    def __init__(self):
+    def __init__(self) -> None:
         self.plays = []
         for i in range(3):
             for j in range(3):
@@ -21,7 +23,7 @@ class Board:
 
 
 class Game:
-    def __init__(self):
+    def __init__(self) -> None:
         self.last_symbol = " "
         self.board = Board()
         self.winner = " "
@@ -31,13 +33,16 @@ class Game:
         if self.last_symbol == " ":
             # if player is O
             if symbol == "O":
-                raise Exception("Invalid first player")
+                msg = "Invalid first player"
+                raise Exception(msg)
         # if not first move but player repeated
         elif symbol == self.last_symbol:
-            raise Exception("Invalid next player")
+            msg = "Invalid next player"
+            raise Exception(msg)
         # if not first move but play on an already played tile
         elif self.board.tile_at(x, y).symbol != " ":
-            raise Exception("Invalid position")
+            msg = "Invalid position"
+            raise Exception(msg)
 
         # update game state
         self.last_symbol = symbol

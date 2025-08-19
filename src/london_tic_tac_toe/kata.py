@@ -19,7 +19,7 @@ class Column(Enum):
 
 
 class Cell:
-    def __init__(self, row: Row, column: Column):
+    def __init__(self, row: Row, column: Column) -> None:
         self.row = row
         self.column = column
 
@@ -28,7 +28,7 @@ class Cell:
 
 
 class Turn:
-    def __init__(self, cell: Cell, player: Player):
+    def __init__(self, cell: Cell, player: Player) -> None:
         self.cell = cell
         self.player = player
 

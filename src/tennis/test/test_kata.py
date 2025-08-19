@@ -49,7 +49,7 @@ def play_game(tennis_game, p1_points, p2_points, p1_name, p2_name):
     return game
 
 
-@pytest.mark.parametrize("p1_points p2_points score p1_name p2_name".split(), test_cases)
+@pytest.mark.parametrize(("p1_points", "p2_points", "score", "p1_name", "p2_name"), test_cases)
 def test_get_score_most_games(p1_points, p2_points, score, p1_name, p2_name):
     game = play_game(TennisGame1, p1_points, p2_points, p1_name, p2_name)
     assert score == game.score()

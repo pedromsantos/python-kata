@@ -1,5 +1,9 @@
+# pylint: skip-file
+# ruff: noqa:PLR2004
+
+
 class TennisGame1:
-    def __init__(self, player1_name, player2_name):
+    def __init__(self, player1_name, player2_name) -> None:
         self.player1_name = player1_name
         self.player2_name = player2_name
         self.p1points = 0

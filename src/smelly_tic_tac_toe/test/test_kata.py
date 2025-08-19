@@ -1,3 +1,6 @@
+# pylint: skip-file
+# ruff: noqa: PT011
+
 import pytest
 
 from smelly_tic_tac_toe.kata import Game

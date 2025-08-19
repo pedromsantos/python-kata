@@ -1,11 +1,11 @@
 class Copier:
-    def copy(self):
+    def copy(self) -> None:
         return
 
 
 class Source:
     def get_char(self) -> str:
-        pass  # Method to be implemented
+        return ""
 
 
 class Destination:

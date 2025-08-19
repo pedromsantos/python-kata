@@ -1,9 +1,21 @@
 # Makefile for Python Kata
 
-.PHONY: test fizz fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london deps
+.PHONY: test fizz fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london deps format lint lint-fix types
 
 deps:
-	poetry install
+	uv sync
+
+format:
+	uv run ruff format
+
+lint:
+	uv run ruff check
+
+lint-fix:
+	uv run ruff check --fix
+
+types:
+	uv run pyright
 
 test:  # Make test the default task
 	$(MAKE) fizz

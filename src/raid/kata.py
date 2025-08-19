@@ -1,9 +1,13 @@
+from typing import Never
+
+
 class RaidService:
     def get_raids_by_guild_member(self, other):
         player = GuildDao.find_active_player()
 
         if player is None:
-            raise ValueError("Player not found")
+            msg = "Player not found"
+            raise ValueError(msg)
 
         if player in other.get_friends():
             return RaidDao.find_raids_by(other)
@@ -12,7 +16,7 @@ class RaidService:
 
 
 class GuildMember:
-    def __init__(self):
+    def __init__(self) -> None:
         self.raids = []
         self.friends = []
 
@@ -31,14 +35,16 @@ class GuildMember:
 
 class GuildDao:
     @staticmethod
-    def find_active_player():
-        raise NotImplementedError("Method not implemented")
+    def find_active_player() -> Never:
+        msg = "Method not implemented"
+        raise NotImplementedError(msg)
 
 
 class RaidDao:
     @staticmethod
-    def find_raids_by(guild_member):
-        raise NotImplementedError("Method not implemented")
+    def find_raids_by(guild_member) -> Never:
+        msg = "Method not implemented"
+        raise NotImplementedError(msg)
 
 
 class Raid:
