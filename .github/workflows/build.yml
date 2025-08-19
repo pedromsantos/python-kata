@@ -11,22 +11,23 @@ permissions:
 
 jobs:
   build:
-    name: uv build, lint and test
+    name: build
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
-      - name: Set up Python 3.12
+      - name: checkout
+        uses: actions/checkout@v5
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Install uv
         uses: astral-sh/setup-uv@v6
-      - name: setup
+      - name: setup python environment
         run: make setup
       - name: lint
         run: make lint
-      - name: types
+      - name: type check
         run: make types
       - name: test
         run: make test
