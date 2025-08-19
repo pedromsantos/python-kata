@@ -1,17 +1,17 @@
 [project]
 name = "python-kata"
 version = "0.0.1"
+requires-python = "==3.12.*"
 description = "A collection of coding katas from [Agile Technical Practices Distilled](https://leanpub.com/agiletechnicalpracticesdistilled)"
 authors = [
     { name = "Pedro M Santos", email = "pedromsantos@users.noreply.github.com" },
 ]
 readme = "README.md"
-requires-python = ">=3.12"
 dependencies = [
 ]
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "ruff>=0.12.9,<1.0.0",
     "pytest>=8.4.1,<9.0.0",
     "pytest-cov>=6.2.1,<7.0.0",
