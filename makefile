@@ -3,11 +3,7 @@
 .PHONY: test tests fizz fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london deps format lint lint-fix types
 
 deps:
-	uv sync
-
-setup:
-	uv venv
-	uv pip install .
+	uv sync --locked --all-extras --dev
 
 format:
 	uv run ruff format
