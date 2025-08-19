@@ -16,12 +16,6 @@ To run the tests for the various katas, you can use the following commands:
   make test
   ```
 
-  or:
-
-  ```bash
-    poetry run pytest
-  ```
-
 ### Individual Tests
 
 You can also run tests for individual katas using the following commands:
