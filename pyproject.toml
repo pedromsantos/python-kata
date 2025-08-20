@@ -7,8 +7,7 @@ authors = [
     { name = "Pedro M Santos", email = "pedromsantos@users.noreply.github.com" },
 ]
 readme = "README.md"
-dependencies = [
-]
+dependencies = []
 
 [dependency-groups]
 dev = [
@@ -20,7 +19,7 @@ dev = [
     "pytest-approvaltests>=0.2.4,<1.0.0",
     "mutmut>=3.3.1,<4.0.0",
     "pyright>=1.1.403",
-    "coverage"
+    "coverage",
 ]
 
 [tool.pytest.ini_options]
@@ -34,14 +33,28 @@ unsafe-fixes = true
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["COM812", "ISC001", "D100", "D101", "D102", "D103", "D104", "D105", "D106", "D107", "S101", "ANN001", "ANN201"]
+ignore = [
+    "COM812",
+    "ISC001",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+    "S101",
+    "ANN001",
+    "ANN201",
+]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
 [tool.pyright]
 include = ["src"]
-exclude = ["**/.venv", "**/__pycache__", "node_modules"]
+exclude = ["**/.venv", "**/__pycache__"]
 
 [tool.coverage.run]
 branch = true
