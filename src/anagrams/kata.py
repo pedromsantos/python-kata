@@ -1,0 +1,1 @@
+ANAGRAMS = 0

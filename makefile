@@ -1,4 +1,4 @@
-.PHONY: test tests fizz fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london deps format lint lint-fix types
+.PHONY: test tests fizz stats anagrams fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london deps format lint lint-fix types
 
 test:
 	uv run pytest --cov=src
@@ -20,6 +20,8 @@ types:
 
 tests:
 	$(MAKE) fizz
+	$(MAKE) stats
+	$(MAKE) anagrams
 	$(MAKE) fib
 	$(MAKE) leap
 	$(MAKE) prime
@@ -37,6 +39,12 @@ tests:
 
 fizz:
 	pytest src/fizz_buzz/test
+
+stats:
+	pytest src/stats_calculator/test
+
+anagrams:
+	pytest src/anagrams/test
 
 fib:
 	pytest src/fibonacci/test
