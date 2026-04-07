@@ -33,11 +33,17 @@ Write characterization tests to describe the code as is.
 ### Second run - Configure mutation testing
 
 - Use mutation tests to further increase the confidence on your tests
-  . Open a terminal.
-  - install mutation tool striker `dotnet tool install -g dotnet-stryker`
-  - Make sure you are on the Gilded Rose directory `cd 11_GildedRose`
-  - run `dotnet-stryker --test-project ./GildedRoseTests/GildedRoseTests.csproj`
+  - go to the project root folder and execute `uv run mutmut results`
   - Check the mutation test reports
+
+    ```bash
+    gilded_rose.kata.xǁGildedRoseǁupdate_quality__mutmut_1: survived
+    gilded_rose.kata.xǁGildedRoseǁupdate_quality__mutmut_2: survived
+    gilded_rose.kata.xǁGildedRoseǁupdate_quality__mutmut_3: survived
+    ...
+    ```
+
+  - To check a specific line execute `uv run mutmut show gilded_rose.kata.xǁGildedRoseǁupdate_quality__mutmut_1`
   - Add any missing tests the mutation tool uncovers
 
 ### Third run - Add approval (aka golden master/snapshot) tests
