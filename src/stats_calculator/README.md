@@ -9,6 +9,15 @@ Your task is to process a sequence of integer numbers to determine the following
 - number of elements in the sequence
 - average value
 
+### Function Signature
+
+```python
+def stats(numbers: list[int]) -> dict[str, float]:
+    ...
+```
+
+Returns: `{"min": ..., "max": ..., "count": ..., "avg": ...}`
+
 ### Example
 
 For the input: `[6, 9, 15, -2, 92, 11]`
@@ -19,6 +28,14 @@ For the input: `[6, 9, 15, -2, 92, 11]`
 | maximum value                      | 92        |
 | number of elements in the sequence | 6         |
 | average value                      | 21.833333 |
+
+## Edge Cases to Consider
+
+- Empty list `[]` — should return `0` for count, `None` or `0` for average
+- Single element `[5]` — min = max = avg = 5
+- Negative numbers `[-5, -10, -3]`
+- All same values `[3, 3, 3]`
+- Very large numbers
 
 ## TDD Rules
 

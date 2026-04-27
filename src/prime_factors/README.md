@@ -10,6 +10,7 @@ Given a positive integer, return an array of its prime factors in ascending orde
 
 | **Input** | **Output** | **Explanation** |
 |-----------|------------|-----------------|
+| 1         | `[]`       | Edge case       |
 | 2         | `[2]`      | 2 is prime      |
 | 3         | `[3]`      | 3 is prime      |
 | 4         | `[2,2]`    | 4 = 2 × 2       |

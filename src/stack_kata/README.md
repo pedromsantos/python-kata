@@ -4,9 +4,9 @@
 
 Implement a Stack class with the following public methods:
 
-- `push(value: number): void` - Adds a value to the top of the stack
-- `pop(): number` - Removes and returns the top value from the stack
-- The stack should throw an exception when attempting to pop from an empty stack
+- `push(value: int) -> None` - Adds a value to the top of the stack
+- `pop() -> int` - Removes and returns the top value from the stack
+- The stack should raise an `IndexError` when attempting to pop from an empty stack
 
 ## Test Cases
 

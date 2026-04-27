@@ -33,23 +33,21 @@ Refactor the code to improve its readability.
 ##### Execute tests
 
 ```sh
-dotnet test
+make tennis
 ```
 
 ##### Execute tests with coverage
 
 ```sh
-dotnet test --collect:"XPlat Code Coverage;IncludeTestAssembly=true;Format=cobertura"
+uv run pytest --cov=src/tennis
 ```
 
 ```txt
---------------------------|---------|----------|---------|---------|-------------------
-File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
---------------------------|---------|----------|---------|---------|-------------------
-All files                 |   86.28 |    67.74 |   96.61 |   86.03 |
- 10_Tennis                |     100 |      100 |     100 |     100 |
-  kata.py                 |     100 |      100 |     100 |     100 |
-...
+Name                            Stmts   Miss  Cover
+---------------------------------------------------
+src/tennis/kata.py                  50      0    100%
+---------------------------------------------------
+TOTAL                               50      0    100%
 ```
 
 #### While refactoring
@@ -65,14 +63,14 @@ All files                 |   86.28 |    67.74 |   96.61 |   86.03 |
 
 1. Tackle clutter by
    - Formatting the code, a simple and very effective technique
-     - Format consistently and don’t force the reader to waste timed due to inconsistent formatting
+     - Format consistently and don't force the reader to waste timed due to inconsistent formatting
    - Renaming bad names or abbreviations on variables, arguments, instance variables, methods, and classes
      - <https://www.digdeeproots.com/articles/naming-process/>
 2. Tackle Comments and Dead Code by
    - Deleting useless comments
    - Deleting useful comments by extracting a method named after them
    - Deleting dead code
-     - Don’t make the reader waste time figuring out code that is not used
+     - Don't make the reader waste time figuring out code that is not used
 3. Tackle implicit knowledge by
    - Extracting constants from magic numbers and strings
    - Extracting complex conditional expressions

@@ -1,5 +1,9 @@
 # Mars Rover kata
 
+> **Note:** There are two Mars Rover katas in this repo:
+> - **`mars_rover`** (this one) — The simpler, classic version. Start here.
+> - **`esa_mars_rover`** — A more complex variant with multi-language support and timestamp tracking.
+
 ## Problem Description
 
 A NASA robot rover has landed on Mars. The rover must navigate a rectangular plateau divided into a grid, capturing terrain images with its on-board cameras to send back to Earth.

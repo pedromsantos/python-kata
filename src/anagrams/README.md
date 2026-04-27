@@ -2,24 +2,41 @@
 
 ## Problem Description
 
-Write a program to generate all potential anagrams of an input string.
+Write a function that generates all possible anagrams (permutations) of an input string.
+
+### Function Signature
+
+```python
+def anagrams(word: str) -> list[str]:
+    ...
+```
 
 ### Example
 
-For the input: `"biro"`
+For the input: `"abc"`
 
 The potential anagrams are:
 
-- biro bior brio broi boir bori
-- ibro ibor irbo irob iobr iorb
-- rbio rboi ribo riob roib robi
-- obir obri oibr oirb orbi orib
+- abc, acb, bac, bca, cab, cba
+
+For the input: `"aab"`
+
+The potential anagrams are:
+
+- aab, aba, baa
 
 ## TDD Rules
 
 1. ✅ Write production code only to pass a failing unit test
 2. ✅ Write only enough of a unit test to make it fail
 3. ✅ Write only enough production code to make the failing test pass
+
+## Edge Cases to Consider
+
+- Empty string `""` → should return `[""]` or `[]`
+- Single character `"a"` → should return `["a"]`
+- String with duplicate characters `"aab"` → avoid duplicate results
+- Long strings — consider efficiency
 
 ## Resources
 
