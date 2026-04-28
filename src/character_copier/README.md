@@ -1,4 +1,4 @@
-# Character Copier kata
+# Character Copier Kata
 
 ## Source
 

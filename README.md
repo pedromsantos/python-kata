@@ -3,7 +3,7 @@
 A collection of coding katas following the learning path from [Agile Technical Practices Distilled](https://leanpub.com/agiletechnicalpracticesdistilled).
 
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![image](https://img.shields.io/pypi/l/ruff.svg)](https://github.com/pedromsantos/python-kata/blob/main/LICENSE)
+[![License: EUPL-1.2](https://img.shields.io/badge/License-EUPL--1.2-green.svg)](https://opensource.org/license/eupl-1-2/)
 ![Actions status](https://github.com/pedromsantos/python-kata/actions/workflows/build.yml/badge.svg)
 
 ## License
@@ -126,10 +126,16 @@ You can also run tests for individual katas using the following commands:
   make london
   ```
 
-- **Raid**:
+- **Stats Calculator**:
 
   ```bash
-  make raid
+  make stats
+  ```
+
+- **Anagrams**:
+
+  ```bash
+  make anagrams
   ```
 
 Make sure you have `pytest` installed to run the tests successfully.

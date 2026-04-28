@@ -148,14 +148,14 @@ Scenario: Take an item from a location
 Scenario: Take an item from a location that is not present
   Given I'm playing Katacombs
   When Take an item from a location
-  But the item does not exists in the locationction
+  But the item does not exist in the location
   Then I'm shown a message saying "There is no %s to take here"
   And the item is not present in my bag
 
 Scenario: Take an item from a location but item is already in the bag
   Given I'm playing Katacombs
   When Take an item from a location
-  nd the item exists in the location
+  And the item exists in the location
   But I already have the item on my bag
   Then I'm shown a message saying "I already have %s in my bag"
 
@@ -163,7 +163,7 @@ Scenario: Drop an existing item from the bag
   Given I'm playing Katacombs
   When Drop an item from the bag
   And the item exists in the bag
-  Then I'm shown a message saying "Droped %"
+  Then I'm shown a message saying "Dropped %"
   And the item is no longer present in my bag
 
 Scenario: Drop a non existing item from the bag
@@ -176,11 +176,11 @@ Scenario: Drop a non existing item from the bag
 ### Feature using items
 
 ```gherkin
-Scenario: Use a key in the bag to open a loked door
+Scenario: Use a key in the bag to open a locked door
   Given I'm playing Katacombs
   And I'm in a location with a path behind a locked door
   And I have the key to open the door in my bag
-  When I use the key to open the door
+  When I use the key to open the locked door
   Then I'm shown a message "Door open"
   And I'm shown a short description of the path
 ```

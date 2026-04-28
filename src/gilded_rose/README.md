@@ -51,7 +51,9 @@ Write characterization tests to describe the code as is.
 - Use approval tests to test the solution instead of characterization tests
 - Note the advantages/disadvantages of using one approach or the other
 
-#### Usefull code snipets
+#### Useful code snippets
+
+> **Note:** The following code snippet is written in C# for reference from the original [GildedRose Refactoring Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata). Use it as inspiration for approval/golden master testing.
 
 ```csharp
 [UseReporter(typeof(DiffReporter))]
