@@ -138,4 +138,40 @@ You can also run tests for individual katas using the following commands:
   make anagrams
   ```
 
+- **Refactoring Golf**:
+
+  ```bash
+  make golf
+  ```
+
+- **Smelly Mars Rover**:
+
+  ```bash
+  make smellyrover
+  ```
+
+- **Smelly Shopping Cart**:
+
+  ```bash
+  make smellycart
+  ```
+
+- **Smelly Yahtzee**:
+
+  ```bash
+  make smellyyahtzee
+  ```
+
+- **Shopping Cart**:
+
+  ```bash
+  make cart
+  ```
+
+- **Katacombs**:
+
+  ```bash
+  make katacombs
+  ```
+
 Make sure you have `pytest` installed to run the tests successfully.

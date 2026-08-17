@@ -1,4 +1,4 @@
-.PHONY: test tests fizz stats anagrams fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london deps format lint lint-fix types
+.PHONY: test tests fizz stats anagrams fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london golf smellyrover smellycart smellyyahtzee cart katacombs deps format lint lint-fix types
 
 test:
 	uv run pytest --cov=src
@@ -36,6 +36,10 @@ tests:
 	$(MAKE) copier
 	$(MAKE) esa
 	$(MAKE) london
+	$(MAKE) golf
+	$(MAKE) smellyrover
+	$(MAKE) smellycart
+	$(MAKE) smellyyahtzee
 
 fizz:
 	pytest src/fizz_buzz/test
@@ -90,3 +94,21 @@ social:
 
 london:
 	pytest src/london_tic_tac_toe/test
+
+golf:
+	pytest src/refactoring_golf
+
+smellyrover:
+	pytest src/smelly_mars_rover/test
+
+smellycart:
+	pytest src/smelly_shopping_cart/test
+
+smellyyahtzee:
+	pytest src/smelly_yahtzee/test
+
+cart:
+	pytest src/shopping_cart
+
+katacombs:
+	pytest src/katacombs
