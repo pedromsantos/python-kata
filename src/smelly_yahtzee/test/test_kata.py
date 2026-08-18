@@ -1,5 +1,5 @@
 # pylint: skip-file
-# ruff: noqa
+# ruff: noqa: PLR2004, PLW0603, SLF001
 import time
 from unittest.mock import MagicMock
 

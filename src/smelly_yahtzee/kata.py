@@ -1,5 +1,4 @@
 # pylint: skip-file
-# ruff: noqa
 import random
 from typing import Protocol
 

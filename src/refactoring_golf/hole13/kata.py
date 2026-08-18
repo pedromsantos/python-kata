@@ -1,4 +1,5 @@
-from typing import Literal
+# ruff: noqa: ANN202, ANN204, EM101, TRY002, TRY003
+from typing import Literal, cast
 
 Row = Literal[0, 1, 2]
 Column = Literal[0, 1, 2]
@@ -62,7 +63,7 @@ class Coordinate:
 class Tile:
     def __init__(self, player: Player, coordinate: Coordinate):
         self.coordinate = coordinate
-        self.player = player
+        self.player: Player = player
 
     @property
     def is_not_empty(self):
@@ -83,7 +84,7 @@ class Board:
         self.plays: list[Tile] = []
         for x in range(FIRST_ROW, THIRD_ROW + 1):
             for y in range(FIRST_COLUMN, THIRD_COLUMN + 1):
-                self.plays.append(Tile(NO_PLAYER, Coordinate(x, y)))
+                self.plays.append(Tile(NO_PLAYER, Coordinate(cast("Row", x), cast("Column", y))))
 
     def is_tile_played_at(self, coordinate: Coordinate):
         return self._find_tile_by_coordinate(Tile(NO_PLAYER, coordinate)).is_not_empty
@@ -93,6 +94,7 @@ class Board:
 
     def find_full_row_with_same_player_or_no_player(self):
         for row in range(FIRST_ROW, THIRD_ROW + 1):
+            row = cast("Row", row)
             if self._is_row_full(row) and self._is_row_full_with_same_player(row):
                 return self._player_at(Coordinate(row, FIRST_COLUMN))
 

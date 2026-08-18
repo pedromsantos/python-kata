@@ -1,3 +1,4 @@
+# ruff: noqa: B017, PT011
 import pytest
 
 from refactoring_golf.hole13.kata import Game

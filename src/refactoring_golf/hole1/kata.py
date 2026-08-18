@@ -1,4 +1,4 @@
-# ruff: noqa
+# ruff: noqa: ANN204, EM101, SIM102, TRY002, TRY003
 class Game:
     def __init__(self):
         self.last_symbol = " "

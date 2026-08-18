@@ -1,4 +1,4 @@
-# ruff: noqa
+# ruff: noqa: ANN202, ANN204, EM101, SIM102, TRY002, TRY003
 FIRST_ROW = 0
 SECOND_ROW = 1
 THIRD_ROW = 2

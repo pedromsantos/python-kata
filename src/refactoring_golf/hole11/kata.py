@@ -1,5 +1,5 @@
-# ruff: noqa
-from typing import Literal
+# ruff: noqa: ANN202, ANN204, EM101, SIM102, TRY002, TRY003
+from typing import Literal, cast
 
 Row = Literal[0, 1, 2]
 Column = Literal[0, 1, 2]
@@ -77,7 +77,7 @@ class Board:
         self.plays: list[Tile] = []
         for x in range(FIRST_ROW, THIRD_ROW + 1):
             for y in range(FIRST_COLUMN, THIRD_COLUMN + 1):
-                self.plays.append(Tile(x, y, NO_PLAYER))
+                self.plays.append(Tile(cast("Row", x), cast("Column", y), NO_PLAYER))
 
     def is_tile_played_at(self, x: Row, y: Column):
         return self._find_tile_at(Tile(x, y, NO_PLAYER)).is_not_empty

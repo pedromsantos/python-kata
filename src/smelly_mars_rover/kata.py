@@ -1,5 +1,5 @@
 # pylint: skip-file
-# ruff: noqa
+# ruff: noqa: PLR2004, S311, T201, UP017
 import random
 from dataclasses import dataclass
 from datetime import datetime, timezone
