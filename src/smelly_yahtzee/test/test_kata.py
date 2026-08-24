@@ -95,7 +95,6 @@ class TestTurnLog:
     def test_logs_rerolled_dice(self):
         mock_cup = MagicMock(spec=DiceCup)
         mock_cup.reroll_selected.return_value = [Die(1), Die(2)]
-        mock_cup.current_dice = []
         mock_telemetry = MagicMock(spec=TelemetryPort)
         mock_die = MagicMock(spec=Die, value=6)
 
