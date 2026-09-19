@@ -3,7 +3,7 @@
 
 import pytest
 
-from smelly_tic_tac_toe.kata import Game
+from smelly_tic_tac_toe.game import Game
 
 
 class TestGame:
@@ -88,5 +88,43 @@ class TestGame:
         self.game.play("O", 2, 1)
         self.game.play("X", 1, 1)
         self.game.play("O", 2, 2)
+        winner = self.game.determine_winner()
+        assert winner == "O"
+
+    def test_declare_player_x_as_a_winner_if_three_in_a_column(self):
+        self.game.play("X", 0, 0)
+        self.game.play("O", 0, 1)
+        self.game.play("X", 1, 0)
+        self.game.play("O", 1, 1)
+        self.game.play("X", 2, 0)
+        winner = self.game.determine_winner()
+        assert winner == "X"
+
+    def test_declare_player_o_as_a_winner_if_three_in_a_column(self):
+        self.game.play("X", 0, 1)
+        self.game.play("O", 0, 0)
+        self.game.play("X", 1, 1)
+        self.game.play("O", 1, 0)
+        self.game.play("X", 0, 2)
+        self.game.play("O", 2, 0)
+        winner = self.game.determine_winner()
+        assert winner == "O"
+
+    def test_declare_player_x_as_a_winner_if_three_in_the_main_diagonal(self):
+        self.game.play("X", 0, 0)
+        self.game.play("O", 0, 1)
+        self.game.play("X", 1, 1)
+        self.game.play("O", 1, 0)
+        self.game.play("X", 2, 2)
+        winner = self.game.determine_winner()
+        assert winner == "X"
+
+    def test_declare_player_o_as_a_winner_if_three_in_the_anti_diagonal(self):
+        self.game.play("X", 0, 1)
+        self.game.play("O", 0, 2)
+        self.game.play("X", 0, 0)
+        self.game.play("O", 1, 1)
+        self.game.play("X", 1, 0)
+        self.game.play("O", 2, 0)
         winner = self.game.determine_winner()
         assert winner == "O"
