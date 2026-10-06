@@ -1,4 +1,4 @@
-.PHONY: test tests fizz stats anagrams fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london golf smellyrover smellycart smellyyahtzee cart katacombs deps format lint lint-fix types
+.PHONY: test tests fizz stats anagrams fib leap prime roman stack tic yahtzee tennis gilded raid smelly copier esa social london golf smellyrover smellycart smellyyahtzee cart deps format lint lint-fix types
 
 test:
 	uv run pytest --cov=src
@@ -110,5 +110,3 @@ smellyyahtzee:
 cart:
 	pytest src/shopping_cart
 
-katacombs:
-	pytest src/katacombs
