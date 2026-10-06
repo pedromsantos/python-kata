@@ -168,10 +168,4 @@ You can also run tests for individual katas using the following commands:
   make cart
   ```
 
-- **Katacombs**:
-
-  ```bash
-  make katacombs
-  ```
-
 Make sure you have `pytest` installed to run the tests successfully.
